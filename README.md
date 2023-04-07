@@ -1,6 +1,6 @@
 # Pokédex
 
-Simple pokédex made with Vite + React + TS
+Simple pokédex made with Vite + React + TS\
 Uses PokéAPI: https://pokeapi.co/
 
 ## How to run (npm)
