@@ -10,7 +10,10 @@ const PokedexSearchbar = ({ onSearch }: Props) => {
     const handleSearchTermChange = (
         event: React.ChangeEvent<HTMLInputElement>
     ) => {
-        setSearchTerm(event.target.value);
+        const value = event.target.value;
+        if (!value || /^[a-zA-Z0-9]+$/.test(value)) {
+            setSearchTerm(value);
+        }
     };
 
     const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
@@ -19,15 +22,19 @@ const PokedexSearchbar = ({ onSearch }: Props) => {
     };
 
     return (
-        <form onSubmit={handleSearch}>
+        <form className="p-4 text-center" onSubmit={handleSearch}>
             <input
                 type="text"
+                placeholder="e.g. Pikachu, 15, Onix, ..."
                 value={searchTerm}
                 onChange={handleSearchTermChange}
             />
-            <button type="submit">Search</button>
+            <button className="m-2 btn btn-warning" type="submit">
+                Search
+            </button>
         </form>
     );
 };
 
 export default PokedexSearchbar;
+export type { Props };
