@@ -1,4 +1,4 @@
-import PokedexSearchbar, { Props } from "./PokemonSearchbar";
+import PokedexSearchbar, { Props } from "./PokedexSearchbar";
 
 function Header({ onSearch }: Props) {
     return (

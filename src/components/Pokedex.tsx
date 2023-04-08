@@ -55,7 +55,7 @@ const Pokedex = () => {
         <>
             <Header onSearch={handleSearch} />
             <section id="pokemon-info" className="container">
-                {loading && !pokemon && (
+                {loading && (
                     <div className="d-flex justify-content-center my-5">
                         <BeatLoader color="#f44336" size={20} />
                     </div>

@@ -38,7 +38,7 @@ const PokemonCard = ({ pokemon }: Props) => {
                     />
                 )}
                 <h4 className="display-4 text-capitalize fw-bold text-danger">
-                    {pokemon.name}
+                    #{pokemon.id} {pokemon.name}
                 </h4>
                 <img
                     src={pokemon.sprites.back_default}
@@ -71,12 +71,8 @@ const PokemonCard = ({ pokemon }: Props) => {
                                         <h5 className="fw-bold">Abilities:</h5>
                                         <ul className="list-unstyled">
                                             {pokemon.abilities.map(
-                                                (ability) => (
-                                                    <li
-                                                        key={
-                                                            ability.ability.name
-                                                        }
-                                                    >
+                                                (ability, index) => (
+                                                    <li key={index}>
                                                         {ability.ability.name}
                                                     </li>
                                                 )
