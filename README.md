@@ -1,18 +1,12 @@
 # Pokédex
-
 Simple pokédex made with Vite + React + TS\
 Uses PokéAPI: https://pokeapi.co/
-
-## How to run (npm)
-
-### Install all required dependencies
-
+## How to run
+### Local
 ```bash
-npm i
+npm i && npm run dev
 ```
-
-### Start dev server
-
+### or using Docker Compose
 ```bash
-npm run dev
+npm i && docker compose up
 ```
